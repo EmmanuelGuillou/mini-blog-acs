@@ -13,22 +13,32 @@ catch(PDOException $e) {
     echo $e->getMessage();
 }
 
-// gestion affichage des articles sous le slider
+// gestion affichage des article sous le slider
 
-    $article_recent = SELECT id_articles FROM articles WHERE max(date);
-    $article_plus_lu = SELECT id_articles FROM articles WHERE max(nombre_lu);
-    $article_moins_lu = SELECT id_articles FROM articles WHERE min(nombre_lu);
+    $liste_article = SELECT titre_article FROM article;
+    $article_recent = SELECT titre_article FROM article WHERE max(date);
+    $article_plus_lu = SELECT titre_article FROM article WHERE max(nombre_lu);
+    $article_moins_lu = SELECT titre_article FROM article WHERE min(nombre_lu);
 
-function articlerecent{
+function article(){
+    echo $liste_article;
+}
+
+function articlerecent(){
     echo $article_recent;
 }
 
-function articlepluslu{
+function articlepluslu(){
     echo $article_plus_lu;
 }
 
-function articlemoinslu{
+function articlemoinslu(){
     echo $article_moins_lu;
 }
+
+article();
+articlerecent();
+articlepluslu();
+articlemoinslu();
 
 ?>
