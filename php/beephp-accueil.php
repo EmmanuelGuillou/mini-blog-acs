@@ -7,6 +7,11 @@ session_start();
 
 try{
     $dbh = new PDO('mysql:host=localhost;dbname=root', $user, $pass);
+
+    article();
+    articlerecent();
+    articlepluslu();
+    articlemoinslu();
 }
 
 catch(PDOException $e) {
@@ -35,10 +40,5 @@ function articlepluslu(){
 function articlemoinslu(){
     echo $article_moins_lu;
 }
-
-article();
-articlerecent();
-articlepluslu();
-articlemoinslu();
 
 ?>
