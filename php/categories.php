@@ -6,14 +6,18 @@
 		$query = $dbh->query("SELECT categories FROM categories");
 		$result = $query->fetchAll();
 		foreach ($result as $row){?>
-			<p><?php echo $row["categories"] ?><p>
+			<p><a id="<?php echo $row["categories"] ?>"><?php echo $row["categories"] ?></a><p>
 		<?php } ?>
 		</div>
 	</div>
 	<?php
 		$dbh = new PDO('mysql:host=localhost;dbname=mecabilog', "root", "mc281284");
-		$query = $dbh->query("SELECT * FROM membres, article, categories, commentaires WHERE membres.id_membre = article.id_membre
-		AND article.id_categorie = categories.id_categorie AND article.id_article = commentaires.id_article");
+		$query = $dbh->query("SELECT membres.login, 
+			categories.categorie, article.contenu 
+			FROM membres, article, categories WHERE 
+			membres.id_membre = article.id_membre 
+			AND article.id_categorie = categories.id_categorie 
+			ORDER BY article.date_a DESC");
 		$result = $query->fetchAll(); 
 	?>	
 	<?php foreach ($result as $row){?>
