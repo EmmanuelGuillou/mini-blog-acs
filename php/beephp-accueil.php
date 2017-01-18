@@ -19,7 +19,16 @@ catch(PDOException $e) {
     $article_plus_lu = SELECT id_articles FROM articles WHERE max(nombre_lu);
     $article_moins_lu = SELECT id_articles FROM articles WHERE min(nombre_lu);
 
-// 
+function articlerecent{
+    echo $article_recent;
+}
 
+function articlepluslu{
+    echo $article_plus_lu;
+}
+
+function articlemoinslu{
+    echo $article_moins_lu;
+}
 
 ?>
