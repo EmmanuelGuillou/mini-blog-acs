@@ -20,10 +20,10 @@ catch(PDOException $e) {
 
 // gestion affichage des article sous le slider
 
-    $liste_article = SELECT titre_article FROM article;
-    $article_recent = SELECT titre_article FROM article WHERE max(date);
-    $article_plus_lu = SELECT titre_article FROM article WHERE max(nombre_lu);
-    $article_moins_lu = SELECT titre_article FROM article WHERE min(nombre_lu);
+    $liste_article = "SELECT titre_article FROM article";
+    $article_recent = "SELECT titre_article FROM article WHERE max(date)";
+    $article_plus_lu = "SELECT titre_article FROM article WHERE max(nombre_lu)";
+    $article_moins_lu = "SELECT titre_article FROM article WHERE min(nombre_lu)";
 
 function article(){
     echo $liste_article;
