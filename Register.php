@@ -63,7 +63,7 @@
 						</div>
 
 						<div class="form-group ">
-							<a href="http://deepak646.blogspot.in" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Register</a>
+							<a target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Register</a>
 						</div>
 						
 					</form>
