@@ -30,15 +30,21 @@ function article(){
 }
 
 function articlerecent(){
+    $article_image = "SELECT url_img FROM article WHERE $article_recent = titre_article";
     echo $article_recent;
+    echo $article_image;
 }
 
 function articlepluslu(){
+    $article_image = "SELECT url_img FROM article WHERE $article_recent = titre_article";
     echo $article_plus_lu;
+    echo $article_image;
 }
 
 function articlemoinslu(){
+    $article_image = "SELECT url_img FROM article WHERE $article_recent = titre_article";
     echo $article_moins_lu;
+    echo $article_image;
 }
 
 ?>
