@@ -2,17 +2,17 @@
 
 <html>
 
-<header>
+<head>
 
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset='utf-8'/>
 
-</header>
+</head>
 
 <body>
    
-    <head>
+    <header>
     
         <div class="container">
 
@@ -92,11 +92,15 @@
                 
             </div>
             
-            
         </div>
-
-    </head>
+		
+    </header>
     
+	<section>
+	
+		<?php include"php/beephp-accueil.php" ?>
+		
+	</section>
     
     
     <footer>
