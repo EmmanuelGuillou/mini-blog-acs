@@ -23,7 +23,7 @@
 			<div class="row main">
 				<div class="main-login main-center">
 				<h5>Sign up for create, modify article and feedback.</h5>
-					<form name="beephp_registration" class="" method="POST" action="php/beephp.php">
+					<form name="beephp_registration" class="" method="POST" action="php/beephp_register.php">
 
 						<div class="form-group">
 							<label for 'nom' class="cols-sm-2 control-label">Your Name</label>
