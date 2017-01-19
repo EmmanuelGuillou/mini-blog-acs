@@ -1,60 +1,60 @@
 <?php
 
-session_start();
-
     $user = 'mathieuc';
     $pass = 'U9YDV9eNf5';
 
-    try {
-      $dbh = new PDO('mysql:host=localhost;dbname=mathieuc', "mathieuc", "U9YDV9eNf5");
-      articlerecent();
-      articlepluslu();
-      articlemoinslu();
-      article();
-     } catch (PDOException $e) {
-      print "Erreur !: " . $e->getMessage() . "<br/>";
-      die();
-    }
+try {
+  $dbh = new PDO('mysql:host=localhost;dbname=mathieuc', "mathieuc", "U9YDV9eNf5");
+  articlerecent($dbh);
+  articlepluslu($dbh);
+  articlemoinslu($dbh);
+  article($dbh);
+ }
+
+ catch (PDOException $e) {
+  print "Erreur !: " . $e->getMessage() . "<br/>";
+  die();
+}
 
 // gestion affichage des article sous le slider
 
+function articlerecent($dbh){
+    $article_recent = "SELECT titre_article, url_img FROM article WHERE date_a = (SELECT  MAX(date_a) FROM article)"; //Va chercher l'article le plus récent
+    foreach ($dbh->query($article_recent) as $row){ ?>
+    <div class="row">
+        <div class="col-md-4 col-sm-12">
+            <?php print $row['titre_article']?>
+            <img src="<?php print $row['url_img'];?>" style="width: 100px;"/>
+        </div>
+<?php }
+}
+
+function articlepluslu($dbh){
+    $article_plus_lu = "SELECT titre_article, url_img FROM article WHERE nombre_lu = (SELECT MAX(nombre_lu) FROM article)"; //Va chercher l'article le plus lu
+    foreach ($dbh->query($article_plus_lu) as $row){ ?>
+        <div class="col-md-4 col-sm-12">
+            <?php print $row['titre_article'];?>
+            <img src="<?php print $row['url_img'];?>" style="width: 100px;"/>
+        </div>
+<?php }
+}
+
+function articlemoinslu($dbh){
+    $article_moins_lu = "SELECT titre_article, url_img FROM article WHERE nombre_lu = (SELECT MIN(nombre_lu) FROM article)"; //Va chercher l'article le moins lu
+    foreach ($dbh->query($article_moins_lu) as $row){ ?>
+        <div class="col-md-4 col-sm-12">
+            <?php print $row['titre_article'];?>
+            <img src="<?php print $row['url_img'];?>" style="width: 100px;"/>
+        </div>
+    </div>
+<?php }
+}
+
+function article($dbh){
     $liste_article = "SELECT titre_article FROM article";
-    $article_recent = "SELECT titre_article, max(date_a) FROM article";
-    $article_plus_lu = "SELECT titre_article, max(nombre_lu) FROM article";
-    $article_moins_lu = "SELECT titre_article, min(nombre_lu) FROM article";
-
-function articlerecent(){
-    $article_image = "SELECT url_img FROM article WHERE $article_recent = titre_article";?>
+    foreach ($dbh->query($liste_article) as $row){ ?>
     <div class="row">
-        <div class="col-md-4 col-sm-12">
-            <?=$article_recent;?>
-            <?=$article_image;?>
-        </div>
-<?php }
-
-function articlepluslu(){
-    $article_image = "SELECT url_img FROM article WHERE $article_recent = titre_article";?>
-    <div class="row">
-        <div class="col-md-4 col-sm-12">
-            <?=$article_plus_lu;?>
-            <?=$article_image;?>
-        </div>
-<?php }
-
-function articlemoinslu(){
-    $article_image = "SELECT url_img FROM article WHERE $article_recent = titre_article";?>
-    <div class="row">
-        <div class="col-md-4 col-sm-12">
-            <?=$article_moins_lu;?>
-            <?=$article_image;?>
-        </div>
+        <?php print $row['titre_article'];?>
     </div>
 <?php }
-
-function article(){?>
-    <div class="row">
-        <?=$liste_article;?>
-    </div>
-<?php}
-
-?>
+} ?>

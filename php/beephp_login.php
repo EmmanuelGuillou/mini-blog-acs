@@ -12,8 +12,9 @@ session_start();
       die();
      }
 
-catch(PDOException $e) {
-    echo $e->getMessage();
-}
+     catch (PDOException $e) {
+       print "Erreur !: " . $e->getMessage() . "<br/>";
+       die();
+      }
 
 ?>
