@@ -96,10 +96,18 @@
                 </div>
                 
             </div>
+<<<<<<< Updated upstream
             
         </div>
 		
     </header>
+=======
+
+        </div>
+
+
+    </head>
+>>>>>>> Stashed changes
     
 	<section>
 	
