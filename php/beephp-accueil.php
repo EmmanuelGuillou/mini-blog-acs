@@ -5,6 +5,8 @@
 
 try {
   $dbh = new PDO('mysql:host=localhost;dbname=mathieuc', "mathieuc", "U9YDV9eNf5");
+
+  //affichage des articles
   articlerecent($dbh);
   articlepluslu($dbh);
   articlemoinslu($dbh);
@@ -17,7 +19,6 @@ try {
 }
 
 // gestion affichage des article sous le slider
-
 function articlerecent($dbh){
     $article_recent = "SELECT titre_article, url_img FROM article WHERE date_a = (SELECT  MAX(date_a) FROM article)"; //Va chercher l'article le plus récent
     foreach ($dbh->query($article_recent) as $row){ ?>

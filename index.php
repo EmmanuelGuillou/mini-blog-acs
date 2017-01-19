@@ -16,21 +16,21 @@
 </head>
 
 <body>
-   
+
     <header>
-    
+
         <div class="container">
 
             <div class="row">
-            
+
                 <img class="col-md-2" style="height: 20%" src="images/Logo.jpg">
-            
+
                 <div class="col-md-6 col-md-offset-1">
 
                     <h1 style="margin: 0" class="text-center">Title</h1>
-                    
+
                     <div class="center-block row">
-                    
+
                         <div class="col-md-4">
 
                             <h2 class="text-center">Acceuil</h2>
@@ -48,11 +48,11 @@
                             <h2 class="text-center">A propos</h2>
 
                         </div>
-                    
+
                     </div>
 
                 </div>
-            
+
                   <div class="col-md-2 col-md-offset-1 dropdown">
                   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     Dropdown
@@ -88,18 +88,18 @@
 								 </form>
 							</div>
 							<div class="bottom text-center">
-								New here ? <a href="#"><b>Join Us</b></a>
+								New here ? <a href="register.php"><b>Join Us</b></a>
 							</div>
 					 </div>
                   </ul>
-                      
+
                 </div>
-                
+
             </div>
 <<<<<<< Updated upstream
-            
+
         </div>
-		
+
     </header>
 =======
 
@@ -108,27 +108,27 @@
 
     </head>
 >>>>>>> Stashed changes
-    
+
 	<section>
-	
+
 		<?php include"php/beephp-accueil.php" ?>
-		
+
 	</section>
-    
-    
+
+
     <footer>
-       
+
        <div class="container">
-        
+
           <p><a href="http://www.freepik.com/free-vector/infinite-logo_798107.htm">Designed by Freepik</a></p>
-        
+
        </div>
-        
+
     </footer>
 
-<script src="js/jquery.min.js"></script>    
-<script src="js/bootstrap.js"></script>  
-    
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
 </body>
 
 </html>
