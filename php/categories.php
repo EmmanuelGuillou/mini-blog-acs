@@ -1,17 +1,19 @@
 <div class="row">
 	<div class="col-sm-3">
 		<div class="row">
+		<!--connection + SQL request for categories's menu + html generation-->
 		<?php 
-		$dbh = new PDO('mysql:host=localhost;dbname=mecabilog', "root", "mc281284");
-		$query = $dbh->query("SELECT categories FROM categories");
-		$result = $query->fetchAll();
-		foreach ($result as $row){?>
-			<p><a id="<?php echo $row["categories"] ?>"><?php echo $row["categories"] ?></a><p>
+			$dbh = new PDO('mysql:host=localhost;dbname=mecabilog', "acs", "U9YDV9eNf5");
+			$query = $dbh->query("SELECT categories FROM categories");
+			$result = $query->fetchAll();
+			foreach ($result as $row){?>
+				<p><a id="<?php echo $row["categories"] ?>"><?php echo $row["categories"] ?></a><p>
 		<?php } ?>
 		</div>
 	</div>
+	<!--connection + SQL request for article's zone + html generation-->
 	<?php
-		$dbh = new PDO('mysql:host=localhost;dbname=mecabilog', "root", "mc281284");
+		$dbh = new PDO('mysql:host=localhost;dbname=mathieuc', "mathieuc", "mc281284");
 		$query = $dbh->query("SELECT membres.login, 
 			categories.categorie, article.contenu 
 			FROM membres, article, categories WHERE 
