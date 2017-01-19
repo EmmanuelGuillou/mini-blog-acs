@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+   
+<html>
+   
     <head> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -67,11 +70,21 @@
 						</div>
 						
 					</form>
+					
 				</div>
+				
 			</div>
+			
 		</div>
+   
+   
+   
+   
+   
+   
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 	</body>
+	
 </html>
