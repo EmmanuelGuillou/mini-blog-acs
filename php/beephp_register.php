@@ -17,16 +17,16 @@ catch(PDOException $e) {
 }
 
 $form = $_POST;
-$id_membre = $form[ 'id_membre' ];
-$nom = $form[ 'nom' ];
-$prenom = $form[ 'prenom' ];
+$id_membre = '';
+$nom = '';
+$prenom = '';
 $login = $form[ 'login' ];
 $m_passe = $form[ 'm_passe' ];
 $mail = $form[ 'mail' ];
 
 $register = "INSERT INTO membres (id_membre, nom, prenom, login, m_passe, mail) VALUES (:id_membre, :nom, :prenom, :login, :m_passe, :mail)";
 
-$query = $db->prepare( $register );
+$query = $dbh->prepare( $register );
 $query->execute( array( ':id_membre'=>$id_membre, ':nom'=>$nom, ':prenom'=>$prenom, ':login'=>$login, ':m_passe'=>$m_passe, ':mail'=>$mail ) );
 
 ?>
