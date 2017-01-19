@@ -5,18 +5,16 @@ session_start();
     $user = 'mathieuc';
     $pass = 'U9YDV9eNf5';
 
-try{
-    $dbh = new PDO("mysql:host=localhost;dbname=mathieuc", $user, $pass);
-
-    articlerecent();
-    articlepluslu();
-    articlemoinslu();
-    article();
-}
-
-catch(PDOException $e) {
-    echo $e->getMessage();
-}
+    try {
+      $dbh = new PDO('mysql:host=localhost;dbname=mathieuc', "mathieuc", "U9YDV9eNf5");
+      articlerecent();
+      articlepluslu();
+      articlemoinslu();
+      article();
+     } catch (PDOException $e) {
+      print "Erreur !: " . $e->getMessage() . "<br/>";
+      die();
+    }
 
 // gestion affichage des article sous le slider
 
