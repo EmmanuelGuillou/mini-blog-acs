@@ -3,7 +3,7 @@
 <html>
 
 <header>
-    
+
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/FontAwesome.otf">
     <link rel="stylesheet" href="css/bootstrap.css"/>
@@ -16,7 +16,7 @@
 </header>
 
 <body>                                    <!--  TOP-BAR-->
-   
+
 <head>
 
     <div id="top-bar">
@@ -36,7 +36,7 @@
                         <div class="row">
 
                           <div class="col-md-2 col-md-offset-5" style="height: 2px; margin-top: 3px; background-color: #fce374; box-shadow: inset 0 1px 0 #fff6ce, inset 0 -1px 0 #e3c852, inset 0 0 0 1px #fce88d, 0 2px 4px rgba(0, 0, 0, 0.2)" >
-                            
+
                           </div>
 
 
@@ -122,125 +122,125 @@
                      </ul>
 
                 </div>
-                
+
             </div>
 
         </div>
-        
+
     </div>
 
 </head>
-  
+
                                         <!--  TOP BAR-->
-                                        
-        
-                           
-                            
+
+
+
+
     <div id="separator" style="height: 2%; width: 100%; background-color: yellow" class="col-md-12">
-                                                                                     
+
     </div>
-                                                
-                                                
+
+
 <!--                                                SECTION-->
-                
+
     <section style="width: 80%; height: 100%; background-color: blue; display: inline-block">
-        
+
     </section>
-    
-    
+
+
 <!--                                                        ASIDE-->
-    
+
     <aside style="width: 20%; height: 100%; float: right; background-color: red">
-       
+
     </aside>
-    
-    
+
+
     <footer>
-       
+
        <div class="container">
-       
-        
+
+
           <p><a href="http://www.freepik.com/free-vector/infinite-logo_798107.htm">Designed by Freepik</a></p>
-        
+
        </div>
-        
+
     </footer>
-    
-<div id="page">  
-    
+
+<div id="page">
+
 </div>
 
 
 
 <!--                                        LOGIN WINDOW-->
-    
-    <div id="windowLogin">            
+
+    <div id="windowLogin">
         <div class="container">
 			<div class="row main">
 				<div class="main-login main-center">
 				<h5>Inscrivez-vous pour créer, modifier des article et des commentaires.</h5>
-					<form class="" method="post" action="#">
-						
-						<div class="form-group">
-							<label for="name" class="cols-sm-2 control-label">Votre nom</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
-								</div>
-							</div>
-						</div>
+                <form name="beephp_registration" class="" method="POST" action="php/beephp_register.php">
 
-						<div class="form-group">
-							<label for="email" class="cols-sm-2 control-label">Votre email</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
-								</div>
-							</div>
-						</div>
+                    <div class="form-group">
+                        <label for 'nom' class="cols-sm-2 control-label">Your Name</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="prenom" id="name"  placeholder="Enter your Name"/>
+                            </div>
+                        </div>
+                    </div>
 
-						<div class="form-group">
-							<label for="username" class="cols-sm-2 control-label">Pseudo</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
-								</div>
-							</div>
-						</div>
+                    <div class="form-group">
+                        <label for 'mail' class="cols-sm-2 control-label">Your Email</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="mail" id="email"  placeholder="Enter your Email"/>
+                            </div>
+                        </div>
+                    </div>
 
-						<div class="form-group">
-							<label for="password" class="cols-sm-2 control-label">Mot de passe</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
-								</div>
-							</div>
-						</div>
+                    <div class="form-group">
+                        <label for 'login' class="cols-sm-2 control-label">Username</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="login" id="username"  placeholder="Enter your Username"/>
+                            </div>
+                        </div>
+                    </div>
 
-						<div class="form-group ">
-							<a target="_blank" type="button" id="button" class="btn btn-success btn-lg btn-block login-button">S'inscrire</a>
-						</div>
+                    <div class="form-group">
+                        <label for 'm_passe' class="cols-sm-2 control-label">Password</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                <input type="password" class="form-control" name="m_passe" id="password"  placeholder="Enter your Password"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+                    </div>
 						<div class="form-group ">
 							<a target="_blank" type="button" id="closeLogin" class="btn btn-danger btn-lg btn-block login-button">Fermer</a>
 						</div>
-						
+
 					</form>
 				</div>
 			</div>
 		</div>
      </div>
-                           
-                <!--                           LOGIN WINDOW-->
-                
 
-<script src="js/jquery.min.js"></script>    
-<script src="js/bootstrap.js"></script> 
+                <!--                           LOGIN WINDOW-->
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
 <script src="js/script.js"></script>
-    
+
 </body>
 
 </html>

@@ -19,7 +19,7 @@ catch(PDOException $e) {
 $form = $_POST;
 $id_membre = '';
 $nom = '';
-$prenom = '';
+$prenom = $form[ 'prenom' ];
 $login = $form[ 'login' ];
 $m_passe = $form[ 'm_passe' ];
 $mail = $form[ 'mail' ];
