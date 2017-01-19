@@ -1,6 +1,11 @@
+                                                <!--RYAN-->
+
+
 <DOCTYPE html>
 
 <html>
+
+<?php session_start(); ?>
 
 <head>
 
@@ -119,3 +124,8 @@
 </body>
 
 </html>
+
+
+
+
+                                                <!--RYAN-->
