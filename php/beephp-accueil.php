@@ -8,10 +8,10 @@ session_start();
 try{
     $dbh = new PDO('mysql:host=localhost;dbname=root', $user, $pass);
 
-    article();
     articlerecent();
     articlepluslu();
     articlemoinslu();
+    article();
 }
 
 catch(PDOException $e) {
