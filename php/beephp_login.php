@@ -2,11 +2,11 @@
 
 session_start();
 
-    $user = 'root';
-    $pass = 'mc281284';
+    $user = 'mathieuc';
+    $pass = 'U9YDV9eNf5';
 
 try{
-    $dbh = new PDO('mysql:host=localhost;dbname=root', $user, $pass);
+    $dbh = new PDO('mysql:host=localhost;dbname=mathieuc', $user, $pass);
 }
 
 catch(PDOException $e) {
