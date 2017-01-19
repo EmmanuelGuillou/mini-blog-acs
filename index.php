@@ -2,6 +2,8 @@
 
 <html>
 
+<?php session_start(); ?>
+
 <head>
 
     <link rel="stylesheet" href="css/bootstrap.css"/>
