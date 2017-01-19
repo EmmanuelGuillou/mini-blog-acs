@@ -78,7 +78,7 @@
                                              <div class="help-block text-right"><a href="">Forget the password ?</a></div>
 										</div>
 										<div class="form-group">
-											 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+											 <button type="submit" class="btn btn-primary btn-block" name="loginSubmit">Sign in</button>
 										</div>
 										<div class="checkbox">
 											 <label>
