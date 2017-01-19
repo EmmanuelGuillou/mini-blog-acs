@@ -7,18 +7,19 @@
 			$query = $dbh->query("SELECT categorie FROM categories");
 			$result = $query->fetchAll();
 			foreach ($result as $row){?>
-				<p><a class="categorie_link" id="<?php echo $row['categorie'] ?>" href="mini-blogs-acs/php/categorie_generation.php?param_url=<?=$row['categorie']?>"> <?php echo $row['categorie'] ?> </a><p>
+				<p><a class="categorie_link" id="<?php echo $row['categorie'] ?>" href="../../index.php?param_url=<?=$row['categorie']?>"> <?php echo $row['categorie'] ?> </a><p>
 		<?php } ?>
 		</div>
 	</div>
 <!--connection + SQL request for article's zone + html generation-->
 	<?php
+		$categorie = $_GET["param_url"];
 		$query = $dbh->query("SELECT membres.avatar, membres.login, 
 			categories.categorie, article.contenu, article.url_img
 			FROM membres, article, categories WHERE 
 			membres.id_membre = article.id_membre 
-			AND article.id_categorie = categories.id_categorie 
-			ORDER BY article.date_a DESC");
+			AND article.id_categorie = categories.id_categorie
+			AND categories.categorie = '".$categorie."' ORDER BY article.date_a DESC");
 		$result = $query->fetchAll(); 
 		// print_r($result);
 	?>	
