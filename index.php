@@ -54,7 +54,7 @@
                         <span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
- <div class="row">
+                  <div class="row">
 							<div class="col-md-12">
 								Login via
 								<div class="social-buttons">
