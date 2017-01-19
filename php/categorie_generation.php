@@ -11,7 +11,7 @@
 		<?php } ?>
 		</div>
 	</div>
-	<!--connection + SQL request for article's zone + html generation-->
+<!--connection + SQL request for article's zone + html generation-->
 	<?php
 		$query = $dbh->query("SELECT membres.avatar, membres.login, 
 			categories.categorie, article.contenu, article.url_img
@@ -24,20 +24,19 @@
 	?>	
 	<div class="col-sm-9">
 		<?php foreach ($result as $row){?>
-		<div class="categorie_container <?php echo $row['categorie']?>">
+		<div class="categorie_container <?php echo $row["categorie"]?>">
 			<div class="row">
 				<div class="col-sm-1">
-					<img src="<?php echo $row['avatar']?>"/>
-					<p><?php echo $row['login']?></p>
+					<img src="<?php echo $row["avatar"]?>"/>
+					<p><?php echo $row["login"]?></p>
 				</div>
 				<div class="col-sm-7">
-					<div><?php echo $row['url_img'] ?></div>
+					<div><?php echo $row["url_img"] ?></div>
 				</div>
 			</div>
 			<div class="row">
-				<div><?php echo $row['contenu'] ?></div>
+				<div><?php echo $row["contenu"] ?></div>
 			</div>
 		</div>
-		<?php } ?>
-	</div>
+	<?php } ?>
 </div>
