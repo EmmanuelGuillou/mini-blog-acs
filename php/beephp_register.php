@@ -6,7 +6,7 @@ session_start();
     $pass = 'U9YDV9eNf5';
 
 try{
-    $dbh = new PDO('mysql:host=localhost;dbname=mathieuc', $user, $pass);
+    $dbh = new PDO("mysql:host=localhost;dbname=mathieuc", $user, $pass);
 }
 
 catch(PDOException $e) {
