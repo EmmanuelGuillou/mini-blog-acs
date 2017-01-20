@@ -59,7 +59,7 @@
 
                         <div class="row">
 
-                          <div class="col-md-2 col-md-offset-5" style="height: 2px; margin-top: 3px; background-color: #fce374; box-shadow: inset 0 1px 0 #fff6ce, inset 0 -1px 0 #e3c852, inset 0 0 0 1px #fce88d, 0 2px 4px rgba(0, 0, 0, 0.2)" >
+                          <div class="col-md-4 col-md-offset-4" style="height: 2px; margin-top: 3px; background-color: #fce374; box-shadow: inset 0 1px 0 #fff6ce, inset 0 -1px 0 #e3c852, inset 0 0 0 1px #fce88d, 0 2px 4px rgba(0, 0, 0, 0.2)" >
 
                           </div>
 
@@ -82,7 +82,7 @@
 
                             <a class="text-uppercase text-center" href="index.php">A propos</a>
 
-                        </div>!
+                        </div>
 
                         <div class="row">
 
