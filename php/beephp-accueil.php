@@ -34,8 +34,8 @@ try {
           <img class="second-slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1>Coup de coeur</h1>
+              <p><?php echo $dataTwo[0] ?></p>
             </div>
           </div>
         </div>
@@ -43,8 +43,8 @@ try {
           <img class="third-slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1>Coup de coeur</h1>
+              <p><?php echo $dataThree[0] ?></p>
             </div>
           </div>
         </div>
