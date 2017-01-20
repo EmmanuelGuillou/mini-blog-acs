@@ -8,16 +8,23 @@
 
 
     $form = $_POST;
+
+    $id_commentaire = '';
     $login = $form[ 'login_comm' ];
     $commentaire = $form[ 'commentaire' ];
     $date_c = date("Y-m-d");
-    $id_membre = $dbh->query("SELECT id_membre FROM membres WHERE login = '$login'");
+    $id_article = '';
+    $query = $dbh->query("SELECT id_membre FROM membres WHERE login = '$login'");
+    $res = $query->fetchAll();
 
-    $add_comm = "INSERT INTO commentaires (id_membre, date_c, commentaire) VALUES (:id_membre, :date_c, :commentaire)";
+if (count($res) > 0) {
+    foreach($res as $id_member){
 
-    $query = $dbh->prepare( $add_comm );
-    $query->execute( array( ':id_membre'=>$id_membre, ':date_c'=>$date_c, ':commentaire'=>$commentaire ) );
+        $add_comm = "INSERT INTO commentaires (id_commentaire, id_membre, date_c, id_article, commentaire) VALUES (:id_commentaire, :id_membre, :date_c, :id_article, :commentaire)";
 
-foreach()
+        $query = $dbh->prepare( $add_comm );
+        $query->execute( array( ':id_commentaire'=>$id_commentaire, ':id_membre'=>$id_member["id_membre"], ':date_c'=>$date_c, 'id_article'=>$id_article, ':commentaire'=>$commentaire ) );
+    }
+}
 
 ?>
