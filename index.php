@@ -3,11 +3,11 @@
 
  <?php
       
-    $DBMS = new PDO('mysql:host=localhost;dbname=ryanf;charset=utf8', 'ryanf', 'TeUWJrnw7n');
+    $DBMS = new PDO('mysql:host=localhost;dbname=mathieuc;charset=utf8', 'mathieuc', 'U9YDV9eNf5');
        
-    $responseOne = $DBMS->query('SELECT full_name FROM member_acs ORDER BY RAND() ');
-    $responseTwo = $DBMS->query('SELECT full_name FROM member_acs ORDER BY RAND() ');
-    $responseThree = $DBMS->query('SELECT full_name FROM member_acs ORDER BY RAND() ');
+    $responseOne = $DBMS->query('SELECT login FROM membres ORDER BY RAND() ');
+    $responseTwo = $DBMS->query('SELECT login FROM membres ORDER BY RAND() ');
+    $responseThree = $DBMS->query('SELECT login FROM membres ORDER BY RAND() ');
     
      $dataOne = $responseOne->fetch();
      $dataTwo = $responseTwo->fetch();
