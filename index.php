@@ -13,10 +13,6 @@
      $dataTwo = $responseTwo->fetch();
      $dataThree = $responseThree->fetch();
 
-    print_r ($dataOne);
-    print_r ($dataTwo);
-    print_r ($dataThree);
-
     ?>
 
 <html>
