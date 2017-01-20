@@ -31,4 +31,6 @@ catch(PDOException $e) {
 // On les exécute
     $query->execute( array( ':id_membre'=>$id_membre, ':nom'=>$nom, ':prenom'=>$prenom, ':login'=>$login, ':m_passe'=>$m_passe, ':mail'=>$mail ) );
 
-?>
+
+    header('Location: ../index.php');
+    exit();?>
