@@ -6,8 +6,13 @@
 			$dbh = new PDO('mysql:host=localhost;dbname=mathieuc', "mathieuc", "U9YDV9eNf5", [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"]);
 			$query = $dbh->query("SELECT categorie FROM categories");
 			$result = $query->fetchAll();
-			foreach ($result as $row){?>
-				<p><a class="categorie_link" id="<?php echo $row['categorie'] ?>" href="../../index.php?param_url=<?=$row['categorie']?>"> <?php echo $row['categorie'] ?> </a><p>
+			foreach ($result as $row){
+				$categorie = $_GET["param_url"];
+				if($row[0] == $categorie){?>
+					<p><a class="categorie_link" id="<?php echo $row['categorie'] ?>" href="../../index.php?param_url=<?=$row['categorie']?>"> <?php echo $row['categorie'] ?> </a></p>
+				<?php } else{ ?>
+					<p><a class="categorie_link" id="<?php echo $row['categorie'] ?>" href="categorie_generation.php?param_url=<?=$row['categorie']?>"> <?php echo $row['categorie'] ?> </a></p>
+				<?php } ?>
 		<?php } ?>
 		</div>
 	</div>
