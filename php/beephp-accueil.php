@@ -12,7 +12,7 @@
 try {
   $dbh = new PDO('mysql:host=localhost;dbname=mathieuc', "mathieuc", "U9YDV9eNf5");
 
-  //affichage des articles
+  //affichage des articles avec la mise en page html
   ?>
 
   <div class="row">
@@ -32,6 +32,7 @@ try {
 
   </div>
 <?php
+//Les articles tous seuls
   article($dbh);
  }
 
