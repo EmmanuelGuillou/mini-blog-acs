@@ -1,11 +1,13 @@
 $("#signUp").click(function()
 {
     $("#windowLogin").fadeIn("fast");
-    $("#page").css("z-index", "2", "backgroundColor" ,"blue", "opacity", "0.4");
+//    $("#page").css("display", "block");
+    $("#page").fadeIn("fast");
 });
 
 
 $("#closeLogin").click(function()
 {
     $("#windowLogin").fadeOut("fast");
+    $("#page").fadeOut("fast");
 });
