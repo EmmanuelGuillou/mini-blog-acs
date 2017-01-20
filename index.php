@@ -263,6 +263,10 @@
 				include "php/categorie_generation.php";
 			}
 		?>
+		<form action='php/article.php' method="post">
+			<a type='button' id='new_article' href='php/article.php'>Nouvel Article</a>
+		</form>
+		
 		</div>
 
                 <!--                           LOGIN WINDOW-->

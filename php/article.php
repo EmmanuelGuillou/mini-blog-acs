@@ -72,7 +72,7 @@ echo("gdfgdfg");
 
         $id_membre = 1;
 
-        $id_categorie = 1;
+        $id_categorie = $_POST['categorie'];
 
         $login = $_POST['login'];
 
@@ -98,3 +98,5 @@ echo("gdfgdfg");
         (':id_membre' => $id_membre, ':login' => $login, ':categorie' => $id_categorie, ':titre_article' => $titre, ':url_img' => $url_img, ':contenu' => $contenu, ':date_a' => $date_a ));
 }
     ?>
+	
+	<a class="text-uppercase text-center" href="../index.php">Acceuil</a>

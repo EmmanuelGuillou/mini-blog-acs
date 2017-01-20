@@ -8,7 +8,7 @@
 		// validation test
 		
 		if($validation_login == true){
-			echo "<button type='button' id='new_article'>Nouvel Article</button>" 
+			echo "<button type='button' id='new_article' href='php/aricle.php>Nouvel Article</button>" 
 		}
 		else{
 			echo "<p>Inscription recquise</p>"
