@@ -1,5 +1,24 @@
 <!DOCTYPE html>
 
+
+ <?php
+      
+    $DBMS = new PDO('mysql:host=localhost;dbname=ryanf;charset=utf8', 'ryanf', 'TeUWJrnw7n');
+       
+    $responseOne = $DBMS->query('SELECT full_name FROM member_acs ORDER BY RAND() ');
+    $responseTwo = $DBMS->query('SELECT full_name FROM member_acs ORDER BY RAND() ');
+    $responseThree = $DBMS->query('SELECT full_name FROM member_acs ORDER BY RAND() ');
+    
+     $dataOne = $responseOne->fetch();
+     $dataTwo = $responseTwo->fetch();
+     $dataThree = $responseThree->fetch();
+       
+    print_r ($dataOne);
+    print_r ($dataTwo);
+    print_r ($dataThree);
+    
+    ?>
+
 <html>
 
 <head>
@@ -152,7 +171,7 @@
                
     <div class="row">
                 
-    <section class="col-md-6">
+    <section class="col-md-7">
     
    
     
