@@ -7,7 +7,7 @@
 			$query = $dbh->query("SELECT categorie FROM categories");
 			$result = $query->fetchAll();
 			foreach ($result as $row){?>
-				<p><a class="categorie_link" id="<?php echo $row['categorie'] ?>" href="mini-blog-acs/php/categorie_generation.php?param_url=<?=$row['categorie']?>"> <?php echo $row['categorie'] ?> </a></p>
+				<p><a class="categorie_link" id="<?php echo $row['categorie'] ?>" href="index.php?categorie=<?=$row['categorie']?>"> <?php echo $row['categorie'] ?> </a></p>
 		<?php } ?>
 		</div>
 	</div>
@@ -20,7 +20,6 @@
 			AND article.id_categorie = categories.id_categorie 
 			ORDER BY article.date_a DESC");
 		$result = $query->fetchAll(); 
-		// print_r($result);
 	?>	
 	<div class="col-sm-9">
 		<?php foreach ($result as $row){?>

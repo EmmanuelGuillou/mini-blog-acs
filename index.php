@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    
+
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/FontAwesome.otf">
     <link rel="stylesheet" href="css/bootstrap.css"/>
@@ -20,6 +20,8 @@
     
                                        <!--  TOP-BAR-->
    
+<header>
+
 <header>
 
     <div id="top-bar">
@@ -47,21 +49,21 @@
 
                         <div class="col-md-4 nav-links">
 
-                            <a class="text-uppercase text-center">Acceuil</a>
+                            <a class="text-uppercase text-center" href="index.php">Acceuil</a>
 
                         </div>
 
                         <div class="col-md-4 nav-links">
 
-                            <a class="text-uppercase text-center">Catégories</a>
+                            <a class="text-uppercase text-center" href="index.php?categorie_page">Catégories</a>
 
                         </div>
 
                         <div class="col-md-4 nav-links">
 
-                            <a class="text-uppercase text-center">A propos</a>
+                            <a class="text-uppercase text-center" href="index.php">A propos</a>
 
-                        </div>
+                        </div>!
 
                         <div class="row">
 
@@ -99,7 +101,7 @@
                                     <a href="#" class="right btn btn-tw"><i class="fa fa-twitter"></i>Google</a>
                                 </div>
                                 <span style="display: block" class="text-center">ou</span>
-                                 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                 <form class="form" role="form" method="post" action="php/beephp_register.php" accept-charset="UTF-8" id="login-nav">
                                         <div class="form-group">
                                              <label class="sr-only" for="exampleInputEmail2">Adresse email</label>
                                              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
@@ -132,6 +134,7 @@
         
     </div>
 
+</header>
 
 </header>
   
@@ -151,51 +154,6 @@
                 
     <section class="col-md-6">
     
-    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 50%">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img class="first-slide" >
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Coup de coeur</h1>
-              <p> <?php echo $dataOne[0] ?></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="second-slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="third-slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div><!-- /.carousel -->
    
     
     </section>
@@ -203,31 +161,8 @@
     </div>
     
     </div>
-    
-    
-<!--                                                        ASIDE-->
-    
-    <aside style="width: 20%; height: 100%; float: right">
-      
-        <p>wesh</p>
-       
-    </aside>
-    
-    
-    <footer>
-       
-       <div class="container">
-       
-        
-          <p><a href="http://www.freepik.com/free-vector/infinite-logo_798107.htm">Designed by Freepik</a></p>
-        
-       </div>
-        
-    </footer>
 
-
-
-<!--                                        LOGIN WINDOW-->
+<!--                                       register WINDOW-->
     
     <div id="windowLogin">            
         <div class="container">
@@ -277,7 +212,7 @@
 						</div>
 
 						<div class="form-group ">
-							<a target="_blank" type="button" id="button" class="btn btn-success btn-lg btn-block login-button">S'inscrire</a>
+							<button target="_blank" type="submit" id="button" class="btn btn-success btn-lg btn-block login-button">S'inscrire</a>
 						</div>
 						<div class="form-group ">
 							<a target="_blank" type="button" id="closeLogin" class="btn btn-danger btn-lg btn-block login-button">Fermer</a>
@@ -291,74 +226,37 @@
     
     <div id="page">  
    
-    </div>
-
-
-
-<!--                                        LOGIN WINDOW-->
-
-    <div id="windowLogin">
-        <div class="container">
-			<div class="row main">
-				<div class="main-login main-center">
-				<h5>Inscrivez-vous pour créer, modifier des article et des commentaires.</h5>
-                <form name="beephp_registration" class="" method="POST" action="php/beephp_register.php">
-
-                    <div class="form-group">
-                        <label for 'nom' class="cols-sm-2 control-label">Your Name</label>
-                        <div class="cols-sm-10">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                <input type="text" class="form-control" name="prenom" id="name"  placeholder="Enter your Name"/>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for 'mail' class="cols-sm-2 control-label">Your Email</label>
-                        <div class="cols-sm-10">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                <input type="text" class="form-control" name="mail" id="email"  placeholder="Enter your Email"/>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for 'login' class="cols-sm-2 control-label">Username</label>
-                        <div class="cols-sm-10">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                <input type="text" class="form-control" name="login" id="username"  placeholder="Enter your Username"/>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for 'm_passe' class="cols-sm-2 control-label">Password</label>
-                        <div class="cols-sm-10">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                <input type="password" class="form-control" name="m_passe" id="password"  placeholder="Enter your Password"/>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group ">
-                        <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>
-                    </div>
-						<div class="form-group ">
-							<a target="_blank" type="button" id="closeLogin" class="btn btn-danger btn-lg btn-block login-button">Fermer</a>
-						</div>
-
-					</form>
-				</div>
-			</div>
+	</div>
+		
+		<div class="container">
+		<?php
+		$dbh = new PDO('mysql:host=localhost;dbname=mathieuc', "mathieuc", "U9YDV9eNf5", [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"]);
+		
+			if (empty($_GET)) {
+				include "php/beephp-accueil.php";
+			}
+			else if (isset($_GET["categorie_page"])) {
+				
+				include "php/categories.php";
+			}		
+			else if (isset($_GET["categorie"])) {
+				
+				include "php/categorie_generation.php";
+			}								
+		?>
 		</div>
-     </div>
-
+		
                 <!--                           LOGIN WINDOW-->
-
+	    <footer>
+		
+		<div class="container">
+       
+        
+        <p><a href="http://www.freepik.com/free-vector/infinite-logo_798107.htm">Designed by Freepik</a></p>
+        
+		</div>
+        
+		</footer>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.js"></script>

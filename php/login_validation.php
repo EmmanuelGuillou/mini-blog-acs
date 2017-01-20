@@ -5,6 +5,8 @@
 		$login = $_POST["login"];
 		$validation_login = in_array($login , $result);
 		
+		// validation test
+		
 		if($validation_login == true){
 			echo "<button type='button' id='new_article'>Nouvel Article</button>" 
 		}

@@ -5,20 +5,25 @@
 		<?php 
 			$dbh = new PDO('mysql:host=localhost;dbname=mathieuc', "mathieuc", "U9YDV9eNf5", [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"]);
 			$query = $dbh->query("SELECT categorie FROM categories");
-			$result = $query->fetchAll();
-			foreach ($result as $row){
-				$categorie = $_GET["param_url"];
-				if($row[0] == $categorie){?>
-					<p><a class="categorie_link" id="<?php echo $row['categorie'] ?>" href="../../index.php?param_url=<?=$row['categorie']?>"> <?php echo $row['categorie'] ?> </a></p>
+			$result = $query->fetchAll(); ?>
+			
+			<p><a href="index.php?categorie_page">Home</a></p>
+			
+			<?php foreach ($result as $row){ ?>
+				<?php $categorie = $_GET["categorie"]; ?>
+				<?php if($row[0] == $categorie){ ?>
+					<p><a class="categorie_link" id="<?php echo $row['categorie'] ?>" href="index.php?categorie=<?=$row['categorie']?>"> <?php echo $row['categorie'] ?> </a></p>
 				<?php } else{ ?>
-					<p><a class="categorie_link" id="<?php echo $row['categorie'] ?>" href="categorie_generation.php?param_url=<?=$row['categorie']?>"> <?php echo $row['categorie'] ?> </a></p>
+					<p><a class="categorie_link" id="<?php echo $row['categorie'] ?>" href="index.php?categorie=<?=$row['categorie']?>"> <?php echo $row['categorie'] ?> </a></p>
 				<?php } ?>
-		<?php } ?>
+			<?php } ?>
+
 		</div>
 	</div>
 <!--connection + SQL request for article's zone + html generation-->
 	<?php
-		$categorie = $_GET["param_url"];
+	
+		$categorie = $_GET["categorie"];
 		$query = $dbh->query("SELECT membres.avatar, membres.login, 
 			categories.categorie, article.contenu, article.url_img
 			FROM membres, article, categories WHERE 

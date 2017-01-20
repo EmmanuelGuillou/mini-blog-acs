@@ -1,9 +1,4 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/bootstrap.css"/>
-</head>
+
 <?php
 
     $user = 'mathieuc';
@@ -17,6 +12,52 @@ try {
 
   <div class="row">
       <div class="col-md-9 col-sm-12">
+	  
+	  <div id="myCarousel" class="carousel slide" data-ride="carousel" class="col-md-12">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" >
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Coup de coeur</h1>
+              <p> <?php echo $dataOne[0] ?></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>One more for good measure.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
 
 <?php
   articlerecent($dbh);
@@ -83,4 +124,3 @@ function article($dbh){
 <?php }
 } ?>
 
-</html>
