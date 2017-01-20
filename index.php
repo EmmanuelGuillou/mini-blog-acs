@@ -1,23 +1,26 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 
-<header>
-
+<head>
+    
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/FontAwesome.otf">
     <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/register-style.css"/>
     <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
     <meta charset='utf-8'/>
 
-</header>
+</head>
 
-<body>                                    <!--  TOP-BAR-->
-
-<head>
+<body> 
+    
+                                       <!--  TOP-BAR-->
+   
+<header>
 
     <div id="top-bar">
 
@@ -36,7 +39,7 @@
                         <div class="row">
 
                           <div class="col-md-2 col-md-offset-5" style="height: 2px; margin-top: 3px; background-color: #fce374; box-shadow: inset 0 1px 0 #fff6ce, inset 0 -1px 0 #e3c852, inset 0 0 0 1px #fce88d, 0 2px 4px rgba(0, 0, 0, 0.2)" >
-
+                            
                           </div>
 
 
@@ -122,53 +125,173 @@
                      </ul>
 
                 </div>
-
+                
             </div>
 
         </div>
-
+        
     </div>
 
-</head>
 
+</header>
+  
                                         <!--  TOP BAR-->
-
-
-
-
-    <div id="separator" style="height: 2%; width: 100%; background-color: yellow" class="col-md-12">
-
-    </div>
-
-
+                                        
+        
+                           
+                            
+    <div id="separator" class="col-md-12"></div>
+                                                
+                                                
 <!--                                                SECTION-->
-
-    <section style="width: 80%; height: 100%; background-color: blue; display: inline-block">
-
+               
+    <div class="container">
+               
+    <div class="row">
+                
+    <section class="col-md-6">
+    
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 50%">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" >
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Coup de coeur</h1>
+              <p> <?php echo $dataOne[0] ?></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>One more for good measure.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+   
+    
     </section>
-
-
+    
+    </div>
+    
+    </div>
+    
+    
 <!--                                                        ASIDE-->
-
-    <aside style="width: 20%; height: 100%; float: right; background-color: red">
-
+    
+    <aside style="width: 20%; height: 100%; float: right">
+      
+        <p>wesh</p>
+       
     </aside>
-
-
+    
+    
     <footer>
-
+       
        <div class="container">
-
-
+       
+        
           <p><a href="http://www.freepik.com/free-vector/infinite-logo_798107.htm">Designed by Freepik</a></p>
-
+        
        </div>
-
+        
     </footer>
 
-<div id="page">
 
-</div>
+
+<!--                                        LOGIN WINDOW-->
+    
+    <div id="windowLogin">            
+        <div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+				<h5>Inscrivez-vous pour créer, modifier des article et des commentaires.</h5>
+					<form class="" method="post" action="#">
+						
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Votre nom</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Votre email</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="username" class="cols-sm-2 control-label">Pseudo</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Mot de passe</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group ">
+							<a target="_blank" type="button" id="button" class="btn btn-success btn-lg btn-block login-button">S'inscrire</a>
+						</div>
+						<div class="form-group ">
+							<a target="_blank" type="button" id="closeLogin" class="btn btn-danger btn-lg btn-block login-button">Fermer</a>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+     </div>
+    
+    <div id="page">  
+   
+    </div>
 
 
 
