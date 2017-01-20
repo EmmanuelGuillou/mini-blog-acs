@@ -1,5 +1,24 @@
 <!DOCTYPE html>
 
+
+ <?php
+      
+    $DBMS = new PDO('mysql:host=localhost;dbname=ryanf;charset=utf8', 'ryanf', 'TeUWJrnw7n');
+       
+    $responseOne = $DBMS->query('SELECT full_name FROM member_acs ORDER BY RAND() ');
+    $responseTwo = $DBMS->query('SELECT full_name FROM member_acs ORDER BY RAND() ');
+    $responseThree = $DBMS->query('SELECT full_name FROM member_acs ORDER BY RAND() ');
+    
+     $dataOne = $responseOne->fetch();
+     $dataTwo = $responseTwo->fetch();
+     $dataThree = $responseThree->fetch();
+       
+    print_r ($dataOne);
+    print_r ($dataTwo);
+    print_r ($dataThree);
+    
+    ?>
+
 <html>
 
 <head>
@@ -149,9 +168,9 @@
                
     <div class="row">
                 
-    <section class="col-md-6">
+    <section class="col-md-7">
     
-    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 50%">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -172,8 +191,8 @@
           <img class="second-slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1>Coup de coeur</h1>
+              <p><?php echo $dataTwo[0]; ?> </p>
             </div>
           </div>
         </div>
@@ -181,8 +200,8 @@
           <img class="third-slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1>Coup de coeur</h1>
+              <p><?php echo $dataThree[0] ?> </p>
             </div>
           </div>
         </div>
@@ -207,7 +226,7 @@
     
 <!--                                                        ASIDE-->
     
-    <aside style="width: 20%; height: 100%; float: right">
+    <aside class="col-md-5">
       
         <p>wesh</p>
        
