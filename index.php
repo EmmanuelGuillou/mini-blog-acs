@@ -12,11 +12,11 @@
      $dataOne = $responseOne->fetch();
      $dataTwo = $responseTwo->fetch();
      $dataThree = $responseThree->fetch();
-       
+
     print_r ($dataOne);
     print_r ($dataTwo);
     print_r ($dataThree);
-    
+
     ?>
 
 <html>
@@ -35,10 +35,10 @@
 
 </head>
 
-<body> 
-    
+<body>
+
                                        <!--  TOP-BAR-->
-   
+
 <header>
 
 <header>
@@ -60,7 +60,7 @@
                         <div class="row">
 
                           <div class="col-md-2 col-md-offset-5" style="height: 2px; margin-top: 3px; background-color: #fce374; box-shadow: inset 0 1px 0 #fff6ce, inset 0 -1px 0 #e3c852, inset 0 0 0 1px #fce88d, 0 2px 4px rgba(0, 0, 0, 0.2)" >
-                            
+
                           </div>
 
 
@@ -146,135 +146,135 @@
                      </ul>
 
                 </div>
-                
+
             </div>
 
         </div>
-        
+
     </div>
 
 </header>
 
 </header>
-  
+
                                         <!--  TOP BAR-->
-                                        
-        
-                           
-                            
+
+
+
+
     <div id="separator" class="col-md-12"></div>
-                                                
-                                                
+
+
 <!--                                                SECTION-->
-               
+
     <div class="container">
-               
+
     <div class="row">
-                
+
     <section class="col-md-7">
-    
-   
-    
+
+
+
     </section>
-    
+
     </div>
-    
+
     </div>
 
 <!--                                       register WINDOW-->
-    
-    <div id="windowLogin">            
+
+    <div id="windowLogin">
         <div class="container">
 			<div class="row main">
 				<div class="main-login main-center">
 				<h5>Inscrivez-vous pour créer, modifier des article et des commentaires.</h5>
-					<form class="" method="post" action="#">
-						
+					<form class="" method="post" action="php/beephp_register.php">
+
 						<div class="form-group">
-							<label for="name" class="cols-sm-2 control-label">Votre nom</label>
+							<label for="prenom" class="cols-sm-2 control-label">Votre nom</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+									<input type="text" class="form-control" name="prenom" id="name"  placeholder="Enter your Name"/>
 								</div>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="email" class="cols-sm-2 control-label">Votre email</label>
+							<label for="mail" class="cols-sm-2 control-label">Votre email</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+									<input type="text" class="form-control" name="mail" id="email"  placeholder="Enter your Email"/>
 								</div>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="username" class="cols-sm-2 control-label">Pseudo</label>
+							<label for="login" class="cols-sm-2 control-label">Pseudo</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+									<input type="text" class="form-control" name="login" id="username"  placeholder="Enter your Username"/>
 								</div>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="password" class="cols-sm-2 control-label">Mot de passe</label>
+							<label for="m_passe" class="cols-sm-2 control-label">Mot de passe</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+									<input type="password" class="form-control" name="m_passe" id="password"  placeholder="Enter your Password"/>
 								</div>
 							</div>
 						</div>
 
 						<div class="form-group ">
-							<button target="_blank" type="submit" id="button" class="btn btn-success btn-lg btn-block login-button">S'inscrire</a>
+							<button type="submit" id="button" class="btn btn-success btn-lg btn-block login-button">S'inscrire</a>
 						</div>
 						<div class="form-group ">
 							<a target="_blank" type="button" id="closeLogin" class="btn btn-danger btn-lg btn-block login-button">Fermer</a>
 						</div>
-						
+
 					</form>
 				</div>
 			</div>
 		</div>
      </div>
-    
-    <div id="page">  
-   
+
+    <div id="page">
+
 	</div>
-		
+
 		<div class="container">
 		<?php
 		$dbh = new PDO('mysql:host=localhost;dbname=mathieuc', "mathieuc", "U9YDV9eNf5", [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"]);
-		
+
 			if (empty($_GET)) {
 				include "php/beephp-accueil.php";
 			}
 			else if (isset($_GET["categorie_page"])) {
-				
+
 				include "php/categories.php";
-			}		
+			}
 			else if (isset($_GET["categorie"])) {
-				
+
 				include "php/categorie_generation.php";
-			}								
+			}
 		?>
 		</div>
-		
+
                 <!--                           LOGIN WINDOW-->
 	    <footer>
-		
+
 		<div class="container">
-       
-        
+
+
         <p><a href="http://www.freepik.com/free-vector/infinite-logo_798107.htm">Designed by Freepik</a></p>
-        
+
 		</div>
-        
+
 		</footer>
 
 <script src="js/jquery.min.js"></script>
